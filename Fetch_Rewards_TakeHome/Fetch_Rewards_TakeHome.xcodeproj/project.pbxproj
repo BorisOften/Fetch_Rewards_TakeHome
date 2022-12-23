@@ -16,6 +16,8 @@
 		81A6084B29537AB7009F0327 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6084A29537AB7009F0327 /* MealListTableViewController.swift */; };
 		81A6085229537E3E009F0327 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085129537E3E009F0327 /* MealCell.swift */; };
 		81A6085629538616009F0327 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085529538616009F0327 /* MealDetailViewController.swift */; };
+		81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */; };
+		81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		81A6084A29537AB7009F0327 /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 		81A6085129537E3E009F0327 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		81A6085529538616009F0327 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealDetailViewController+SetupUI.swift"; sourceTree = "<group>"; };
+		81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientMeasureCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +141,8 @@
 		81A6084D29537C21009F0327 /* MealDetail */ = {
 			isa = PBXGroup;
 			children = (
-				81A6085529538616009F0327 /* MealDetailViewController.swift */,
+				81A6085829538F06009F0327 /* Controller */,
+				81A6085729538EFC009F0327 /* View */,
 			);
 			path = MealDetail;
 			sourceTree = "<group>";
@@ -163,6 +168,23 @@
 			isa = PBXGroup;
 			children = (
 				81A6084A29537AB7009F0327 /* MealListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		81A6085729538EFC009F0327 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */,
+				81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81A6085829538F06009F0327 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81A6085529538616009F0327 /* MealDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +321,8 @@
 			files = (
 				81A6085229537E3E009F0327 /* MealCell.swift in Sources */,
 				81A6081B29537884009F0327 /* AppDelegate.swift in Sources */,
+				81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */,
+				81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */,
 				81A6085629538616009F0327 /* MealDetailViewController.swift in Sources */,
 				81A6084B29537AB7009F0327 /* MealListTableViewController.swift in Sources */,
 			);

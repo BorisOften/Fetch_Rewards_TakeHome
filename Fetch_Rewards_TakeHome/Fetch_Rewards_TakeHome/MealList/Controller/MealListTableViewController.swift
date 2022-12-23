@@ -15,6 +15,7 @@ class MealListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         style()
+
     }
 }
 
@@ -48,6 +49,9 @@ extension MealListTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let mealDetailViewController = MealDetailViewController()
+        
+        navigationController?.pushViewController(mealDetailViewController, animated: true)
     }
 }
 

@@ -36,6 +36,9 @@ extension AppDelegate {
     
     func style(){
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = .systemCyan
+        
+
     }
 }
 
