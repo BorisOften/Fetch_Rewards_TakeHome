@@ -10,18 +10,19 @@ import UIKit
 // MARK: - styling and the layout for the various views in the meal detail controller
 extension MealDetailViewController {
     
-//    let mealNameLabel = UILabel()
-//    let instructionLabel = UILabel()
-//    let ingredentLabel = UILabel()
     
+//    let ingredentListLabel = UILabel()
+//    let ingredentMeasurementTableView = UITableView()
     
     func style() {
-        // mealNameLabel
-        mealNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        mealNameLabel.textAlignment = .center
-        mealNameLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        mealNameLabel.adjustsFontForContentSizeCategory = true
-        mealNameLabel.text = "Welcome to Friends"
+        
+        //instructionNameLabel
+        instructionNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        instructionNameLabel.textAlignment = .center
+        instructionNameLabel.font = .boldSystemFont(ofSize: 20)
+        instructionNameLabel.adjustsFontForContentSizeCategory = true
+        instructionNameLabel.text = "How To Make"
+
         
         //instructionLabel
         instructionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -31,29 +32,44 @@ extension MealDetailViewController {
         instructionLabel.numberOfLines = 0
         instructionLabel.text = "Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends"
         
+        //ingredentListLabel
+        ingredentListLabel.translatesAutoresizingMaskIntoConstraints = false
+        ingredentListLabel.textAlignment = .center
+        ingredentListLabel.font = .boldSystemFont(ofSize: 20)
+        ingredentListLabel.adjustsFontForContentSizeCategory = true
+        ingredentListLabel.text = "Ingredients and Measurements"
+        
+        //table view
         ingredentMeasurementTableView.translatesAutoresizingMaskIntoConstraints = false
+        ingredentMeasurementTableView.backgroundColor = .red
       
     }
     
     
     func layout()  {
         
-        view.addSubview(mealNameLabel)
         view.addSubview(instructionLabel)
         view.addSubview(ingredentMeasurementTableView)
+        view.addSubview(instructionNameLabel)
+        view.addSubview(ingredentListLabel)
         
         NSLayoutConstraint.activate([
-            // mealNameLabel
-            mealNameLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
-            mealNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            //instructionNameLabel
+            instructionNameLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
+            instructionNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             // instructionLabel
-            instructionLabel.topAnchor.constraint(equalToSystemSpacingBelow: mealNameLabel.bottomAnchor, multiplier: 3),
+            instructionLabel.topAnchor.constraint(equalToSystemSpacingBelow: instructionNameLabel.bottomAnchor, multiplier: 1),
             instructionLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: instructionLabel.trailingAnchor, multiplier: 1),
             
+            //ingredentListLabel
+            ingredentListLabel.topAnchor.constraint(equalToSystemSpacingBelow: instructionLabel.bottomAnchor, multiplier: 2),
+            ingredentListLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
             //ingredentMeasurementTableView
-            ingredentMeasurementTableView.topAnchor.constraint(equalToSystemSpacingBelow: instructionLabel.bottomAnchor, multiplier: 2),
+            ingredentMeasurementTableView.topAnchor.constraint(equalToSystemSpacingBelow: ingredentListLabel.bottomAnchor, multiplier: 2),
             ingredentMeasurementTableView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: ingredentMeasurementTableView.trailingAnchor, multiplier: 2),
             ingredentMeasurementTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)

@@ -18,6 +18,10 @@
 		81A6085629538616009F0327 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085529538616009F0327 /* MealDetailViewController.swift */; };
 		81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */; };
 		81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */; };
+		81A6085F29553932009F0327 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085E29553932009F0327 /* Meal.swift */; };
+		81A6086129553A69009F0327 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086029553A69009F0327 /* MealRecipe.swift */; };
+		81A6086329553C67009F0327 /* MealsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086229553C67009F0327 /* MealsManager.swift */; };
+		81A6086629553DC6009F0327 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086529553DC6009F0327 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		81A6085529538616009F0327 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealDetailViewController+SetupUI.swift"; sourceTree = "<group>"; };
 		81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientMeasureCell.swift; sourceTree = "<group>"; };
+		81A6085E29553932009F0327 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		81A6086029553A69009F0327 /* MealRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipe.swift; sourceTree = "<group>"; };
+		81A6086229553C67009F0327 /* MealsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsManager.swift; sourceTree = "<group>"; };
+		81A6086529553DC6009F0327 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				81A6081A29537884009F0327 /* AppDelegate.swift */,
+				81A6085D29553899009F0327 /* Model */,
 				81A6084C29537BE5009F0327 /* MealList */,
 				81A6084D29537C21009F0327 /* MealDetail */,
 				81A6084E29537C32009F0327 /* Files */,
+				81A6086429553DA5009F0327 /* Networking */,
 				81A6082829537885009F0327 /* Info.plist */,
 			);
 			path = Fetch_Rewards_TakeHome;
@@ -141,8 +151,8 @@
 		81A6084D29537C21009F0327 /* MealDetail */ = {
 			isa = PBXGroup;
 			children = (
-				81A6085829538F06009F0327 /* Controller */,
 				81A6085729538EFC009F0327 /* View */,
+				81A6085829538F06009F0327 /* Controller */,
 			);
 			path = MealDetail;
 			sourceTree = "<group>";
@@ -187,6 +197,24 @@
 				81A6085529538616009F0327 /* MealDetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		81A6085D29553899009F0327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81A6085E29553932009F0327 /* Meal.swift */,
+				81A6086029553A69009F0327 /* MealRecipe.swift */,
+				81A6086229553C67009F0327 /* MealsManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81A6086429553DA5009F0327 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				81A6086529553DC6009F0327 /* NetworkManager.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +349,10 @@
 			files = (
 				81A6085229537E3E009F0327 /* MealCell.swift in Sources */,
 				81A6081B29537884009F0327 /* AppDelegate.swift in Sources */,
+				81A6086629553DC6009F0327 /* NetworkManager.swift in Sources */,
+				81A6086329553C67009F0327 /* MealsManager.swift in Sources */,
+				81A6086129553A69009F0327 /* MealRecipe.swift in Sources */,
+				81A6085F29553932009F0327 /* Meal.swift in Sources */,
 				81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */,
 				81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */,
 				81A6085629538616009F0327 /* MealDetailViewController.swift in Sources */,

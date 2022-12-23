@@ -11,11 +11,14 @@ import UIKit
 
 class MealListTableViewController: UITableViewController {
     
+    var meals = [MealInfo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         style()
-
+        getMealList()
+        
     }
 }
 
@@ -24,8 +27,8 @@ extension MealListTableViewController {
     func style() {
         view.backgroundColor = .systemBackground
         
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = 60
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = 50
         
         navigationItem.title = "MealList"
     }
@@ -36,13 +39,14 @@ extension MealListTableViewController {
 extension MealListTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        meals.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = MealCell()
-        cell.mealNameLabel.text = "Text"
+        let currentMeal = meals[indexPath.row]
+        cell.mealNameLabel.text = currentMeal.strMeal
         
         return cell
     }
@@ -52,6 +56,27 @@ extension MealListTableViewController {
         let mealDetailViewController = MealDetailViewController()
         
         navigationController?.pushViewController(mealDetailViewController, animated: true)
+    }
+}
+
+// MARK: - Networking
+extension MealListTableViewController {
+    
+    func getMealList() {
+        
+        NetworkManager().getMealList { (result) in
+            
+            switch result {
+                
+            case .success(let meal):
+                self.meals = meal.meals
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

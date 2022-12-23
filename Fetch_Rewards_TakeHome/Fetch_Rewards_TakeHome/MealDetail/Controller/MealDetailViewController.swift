@@ -9,9 +9,12 @@ import UIKit
 
 class MealDetailViewController: UIViewController {
 
-    let mealNameLabel = UILabel()
+    let instructionNameLabel = UILabel()
     let instructionLabel = UILabel()
+    let ingredentListLabel = UILabel()
     let ingredentMeasurementTableView = UITableView()
+    
+    let mealId: Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +22,8 @@ class MealDetailViewController: UIViewController {
         layout()
         
         setupTableView()
+        navigationItem.title = "Lost"
+        
     }
 }
 
@@ -29,6 +34,9 @@ extension MealDetailViewController : UITableViewDataSource , UITableViewDelegate
     func setupTableView() {
         ingredentMeasurementTableView.dataSource = self
         ingredentMeasurementTableView.delegate = self
+        
+        ingredentMeasurementTableView.estimatedRowHeight = 50
+        ingredentMeasurementTableView.rowHeight = 50
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,5 +49,4 @@ extension MealDetailViewController : UITableViewDataSource , UITableViewDelegate
         
         return cell
     }
-    
 }

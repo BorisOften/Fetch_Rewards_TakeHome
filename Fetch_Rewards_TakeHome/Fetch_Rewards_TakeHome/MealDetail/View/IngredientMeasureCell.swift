@@ -40,13 +40,13 @@ extension IngredientMeasurementCell {
         //ingredientLabel
         ingredientLabel.translatesAutoresizingMaskIntoConstraints = false
         ingredientLabel.textAlignment = .left
-        ingredientLabel.font = .boldSystemFont(ofSize: 20)
+        ingredientLabel.font = .systemFont(ofSize: 20)
         ingredientLabel.text = "Ingredeint"
         
         //measurementLabel
         measurementLabel.translatesAutoresizingMaskIntoConstraints = false
         measurementLabel.textAlignment = .left
-        measurementLabel.font = .boldSystemFont(ofSize: 20)
+        measurementLabel.font = .systemFont(ofSize: 20)
         measurementLabel.text = "measurementLabel"
     }
     
