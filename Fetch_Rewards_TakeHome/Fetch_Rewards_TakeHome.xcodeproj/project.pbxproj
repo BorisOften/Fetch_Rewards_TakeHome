@@ -19,9 +19,9 @@
 		81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */; };
 		81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */; };
 		81A6085F29553932009F0327 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6085E29553932009F0327 /* Meal.swift */; };
-		81A6086129553A69009F0327 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086029553A69009F0327 /* MealRecipe.swift */; };
-		81A6086329553C67009F0327 /* MealsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086229553C67009F0327 /* MealsManager.swift */; };
+		81A6086129553A69009F0327 /* MealRecipeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086029553A69009F0327 /* MealRecipeContent.swift */; };
 		81A6086629553DC6009F0327 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6086529553DC6009F0327 /* NetworkManager.swift */; };
+		81A6088429565487009F0327 /* MealRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6088329565487009F0327 /* MealRecipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,9 +58,9 @@
 		81A608592954EEC1009F0327 /* MealDetailViewController+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MealDetailViewController+SetupUI.swift"; sourceTree = "<group>"; };
 		81A6085B2954FF8C009F0327 /* IngredientMeasureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientMeasureCell.swift; sourceTree = "<group>"; };
 		81A6085E29553932009F0327 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		81A6086029553A69009F0327 /* MealRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipe.swift; sourceTree = "<group>"; };
-		81A6086229553C67009F0327 /* MealsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsManager.swift; sourceTree = "<group>"; };
+		81A6086029553A69009F0327 /* MealRecipeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipeContent.swift; sourceTree = "<group>"; };
 		81A6086529553DC6009F0327 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		81A6088329565487009F0327 /* MealRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				81A6085E29553932009F0327 /* Meal.swift */,
-				81A6086029553A69009F0327 /* MealRecipe.swift */,
-				81A6086229553C67009F0327 /* MealsManager.swift */,
+				81A6086029553A69009F0327 /* MealRecipeContent.swift */,
+				81A6088329565487009F0327 /* MealRecipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,12 +350,12 @@
 				81A6085229537E3E009F0327 /* MealCell.swift in Sources */,
 				81A6081B29537884009F0327 /* AppDelegate.swift in Sources */,
 				81A6086629553DC6009F0327 /* NetworkManager.swift in Sources */,
-				81A6086329553C67009F0327 /* MealsManager.swift in Sources */,
-				81A6086129553A69009F0327 /* MealRecipe.swift in Sources */,
+				81A6086129553A69009F0327 /* MealRecipeContent.swift in Sources */,
 				81A6085F29553932009F0327 /* Meal.swift in Sources */,
 				81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */,
 				81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */,
 				81A6085629538616009F0327 /* MealDetailViewController.swift in Sources */,
+				81A6088429565487009F0327 /* MealRecipe.swift in Sources */,
 				81A6084B29537AB7009F0327 /* MealListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

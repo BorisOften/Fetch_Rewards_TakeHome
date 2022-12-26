@@ -12,7 +12,10 @@ class NetworkManager {
     func getMealList(completion: @escaping(Result<Meal,Error>) -> ()) {
         
         let urlAddress = "https://themealdb.com/api/json/v1/1/filter.php?c=Dessert"
-        let url = URL(string: urlAddress)!
+        
+        guard let url = URL(string: urlAddress)  else {
+            return
+        }
         
         let task = URLSession.shared.dataTask(with: url) { (data, urlResponse, error) in
             
@@ -34,7 +37,11 @@ class NetworkManager {
     func getRecipeInformation(id: String, completion: @escaping (Result<MealRecipe,Error>) -> ()){
         
         let urlAddress = "https://themealdb.com/api/json/v1/1/lookup.php?i=\(id)"
-        let url = URL(string: urlAddress)!
+        
+        guard let url = URL(string: urlAddress)  else {
+            return
+        }
+        
         
         let task = URLSession.shared.dataTask(with: url) { (data, urlResponse, error) in
             
@@ -42,6 +49,10 @@ class NetworkManager {
             print(error?.localizedDescription)
             return
         }
+            
+            guard let httpResponse = urlResponse as? HTTPURLResponse else {
+                return
+            }
 
         do {
             let recipeData = try JSONDecoder().decode(MealRecipe.self, from: data!)

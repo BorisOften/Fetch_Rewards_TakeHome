@@ -53,7 +53,10 @@ extension MealListTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let selectedMeal = meals[indexPath.row]
+        
         let mealDetailViewController = MealDetailViewController()
+        mealDetailViewController.allMealInformation = selectedMeal
         
         navigationController?.pushViewController(mealDetailViewController, animated: true)
     }
@@ -63,13 +66,15 @@ extension MealListTableViewController {
 extension MealListTableViewController {
     
     func getMealList() {
-        
+
         NetworkManager().getMealList { (result) in
             
             switch result {
                 
             case .success(let meal):
                 self.meals = meal.meals
+                // sorting the list
+                self.meals = self.meals.sorted(by: {$0.strMeal < $1.strMeal})
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }

@@ -11,26 +11,23 @@ import UIKit
 extension MealDetailViewController {
     
     
-//    let ingredentListLabel = UILabel()
-//    let ingredentMeasurementTableView = UITableView()
-    
     func style() {
         
-        //instructionNameLabel
-        instructionNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        instructionNameLabel.textAlignment = .center
-        instructionNameLabel.font = .boldSystemFont(ofSize: 20)
-        instructionNameLabel.adjustsFontForContentSizeCategory = true
-        instructionNameLabel.text = "How To Make"
+        //howToMakeTitleLabel
+        howToMakeTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        howToMakeTitleLabel.textAlignment = .center
+        howToMakeTitleLabel.font = .boldSystemFont(ofSize: 20)
+        howToMakeTitleLabel.adjustsFontForContentSizeCategory = true
+        howToMakeTitleLabel.text = "How To Make"
 
         
-        //instructionLabel
-        instructionLabel.translatesAutoresizingMaskIntoConstraints = false
-        instructionLabel.textAlignment = .center
-        instructionLabel.font = UIFont.preferredFont(forTextStyle: .body)
-        instructionLabel.adjustsFontForContentSizeCategory = true
-        instructionLabel.numberOfLines = 0
-        instructionLabel.text = "Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends"
+        //instructionTextView
+        instructionTextView.translatesAutoresizingMaskIntoConstraints = false
+        instructionTextView.textAlignment = .center
+        instructionTextView.font = UIFont.preferredFont(forTextStyle: .body)
+        instructionTextView.isEditable = false
+        instructionTextView.adjustsFontForContentSizeCategory = true
+        instructionTextView.text = "Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends Welcome to Friends"
         
         //ingredentListLabel
         ingredentListLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -41,31 +38,31 @@ extension MealDetailViewController {
         
         //table view
         ingredentMeasurementTableView.translatesAutoresizingMaskIntoConstraints = false
-        ingredentMeasurementTableView.backgroundColor = .red
       
     }
     
     
     func layout()  {
         
-        view.addSubview(instructionLabel)
+        view.addSubview(instructionTextView)
         view.addSubview(ingredentMeasurementTableView)
-        view.addSubview(instructionNameLabel)
+        view.addSubview(howToMakeTitleLabel)
         view.addSubview(ingredentListLabel)
         
         NSLayoutConstraint.activate([
             
-            //instructionNameLabel
-            instructionNameLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
-            instructionNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            //howToMakeTitleLabel
+            howToMakeTitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
+            howToMakeTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            // instructionLabel
-            instructionLabel.topAnchor.constraint(equalToSystemSpacingBelow: instructionNameLabel.bottomAnchor, multiplier: 1),
-            instructionLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: instructionLabel.trailingAnchor, multiplier: 1),
+            // instructionTextView
+            instructionTextView.topAnchor.constraint(equalToSystemSpacingBelow: howToMakeTitleLabel.bottomAnchor, multiplier: 1),
+            instructionTextView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: instructionTextView.trailingAnchor, multiplier: 1),
+            instructionTextView.heightAnchor.constraint(equalToConstant: 200),
             
             //ingredentListLabel
-            ingredentListLabel.topAnchor.constraint(equalToSystemSpacingBelow: instructionLabel.bottomAnchor, multiplier: 2),
+            ingredentListLabel.topAnchor.constraint(equalToSystemSpacingBelow: instructionTextView.bottomAnchor, multiplier: 2),
             ingredentListLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             //ingredentMeasurementTableView

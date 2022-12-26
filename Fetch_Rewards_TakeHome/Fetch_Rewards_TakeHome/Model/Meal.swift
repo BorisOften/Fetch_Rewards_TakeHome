@@ -19,11 +19,11 @@ class Meal: Codable {
 
 class MealInfo: Codable {
     
-    let strMeal: String?
-    let strMealThumb: String?
-    let idMeal: String?
+    let strMeal: String
+    let strMealThumb: String
+    let idMeal: String
 
-    init(strMeal: String? = nil, strMealThumb: String? = nil, idMeal: String? = nil, test: String) {
+    init(strMeal: String, strMealThumb: String, idMeal: String, test: String) {
         
         self.strMeal = strMeal
         self.strMealThumb = strMealThumb
