@@ -60,13 +60,14 @@ struct MealRecipeContent: Codable {
             strIngredient1,strIngredient2,strIngredient3,strIngredient4,strIngredient5,strIngredient6,strIngredient7,strIngredient8,strIngredient9,strIngredient10,strIngredient11,strIngredient12,strIngredient13,strIngredient14,strIngredient15,strIngredient16,strIngredient17,strIngredient18,strIngredient19,strIngredient20
         ]
         
-        for i in 0...indregients.count - 1{
+        for i in 0...indregients.count - 1 {
             if let ind = indregients[i]{
                 if ind.isEmpty {
                     return i
                 }
             }
         }
-        return 0
+        // if none of the ingredients are empty then all 19 ingredients are being used and the table view should have 19 rows
+        return 19
     }
 }

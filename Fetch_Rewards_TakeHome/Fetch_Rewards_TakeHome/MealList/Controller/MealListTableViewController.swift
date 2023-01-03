@@ -13,6 +13,8 @@ class MealListTableViewController: UITableViewController {
     
     var meals = [MealInfo]()
     
+    let cellReuseIdendifier = "cell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,8 +29,9 @@ extension MealListTableViewController {
     func style() {
         view.backgroundColor = .systemBackground
         
-        tableView.estimatedRowHeight = 50
-        tableView.rowHeight = 50
+        tableView.estimatedRowHeight = 90
+        tableView.rowHeight = 90
+        tableView.register(MealCell.self, forCellReuseIdentifier: cellReuseIdendifier)
         
         navigationItem.title = "MealList"
     }
@@ -44,17 +47,22 @@ extension MealListTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = MealCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdendifier, for: indexPath) as! MealCell
         let currentMeal = meals[indexPath.row]
+        
         cell.mealNameLabel.text = currentMeal.strMeal
+        
+        // this will download the image 
+        cell.mealImageView.downloadImage(from: currentMeal.strMealThumb) 
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let selectedMeal = meals[indexPath.row]
         
+        let selectedMeal = meals[indexPath.row]
+        print(selectedMeal.strMealThumb)
         let mealDetailViewController = MealDetailViewController()
         mealDetailViewController.allMealInformation = selectedMeal
         

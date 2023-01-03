@@ -5,7 +5,7 @@
 //  Created by Boris Ofon on 12/22/22.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		811C6D502963D900009BB349 /* imageViewExtension+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811C6D4F2963D900009BB349 /* imageViewExtension+Network.swift */; };
 		81A6081B29537884009F0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A6081A29537884009F0327 /* AppDelegate.swift */; };
 		81A6082429537885009F0327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81A6082329537885009F0327 /* Assets.xcassets */; };
 		81A6082729537885009F0327 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A6082529537885009F0327 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		811C6D4F2963D900009BB349 /* imageViewExtension+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "imageViewExtension+Network.swift"; sourceTree = "<group>"; };
 		81A6081729537884009F0327 /* Fetch_Rewards_TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch_Rewards_TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A6081A29537884009F0327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81A6082329537885009F0327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				81A6086529553DC6009F0327 /* NetworkManager.swift */,
+				811C6D4F2963D900009BB349 /* imageViewExtension+Network.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				81A6086629553DC6009F0327 /* NetworkManager.swift in Sources */,
 				81A6086129553A69009F0327 /* MealRecipeContent.swift in Sources */,
 				81A6085F29553932009F0327 /* Meal.swift in Sources */,
+				811C6D502963D900009BB349 /* imageViewExtension+Network.swift in Sources */,
 				81A6085A2954EEC1009F0327 /* MealDetailViewController+SetupUI.swift in Sources */,
 				81A6085C2954FF8C009F0327 /* IngredientMeasureCell.swift in Sources */,
 				81A6085629538616009F0327 /* MealDetailViewController.swift in Sources */,

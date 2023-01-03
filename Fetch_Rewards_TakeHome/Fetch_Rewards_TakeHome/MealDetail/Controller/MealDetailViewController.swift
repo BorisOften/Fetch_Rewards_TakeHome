@@ -63,7 +63,7 @@ extension MealDetailViewController : UITableViewDataSource , UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // made a funcitopn to only return the non null count
         // if mealInformation is null as it will be before the network call return zero
-        mealInformation?.getIndregentCount() ?? 0
+        return mealInformation?.getIndregentCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
